@@ -6,14 +6,6 @@ describe('AppController', () => {
   let appController: AppController;
   let appService: AppService;
 
-  // beforeEach(async () => {
-  //   const app: TestingModule = await Test.createTestingModule({
-  //     controllers: [AppController],
-  //     providers: [AppService],
-  //   }).compile();
-
-  //   appController = app.get<AppController>(AppController);
-  // });
   beforeEach(async () => {
     appService = new AppService();
     appController = new AppController(appService);
@@ -32,12 +24,4 @@ describe('AppController', () => {
       expect(appController.getItems()).toHaveLength(1);
     })
   })
-  // describe('root', () => {
-  //   it('should return "Hello World!"', () => {
-  //     expect(appController.getHello()).toBe('Hello World!');
-  //   });
-  //   it('should return Item list', () => {
-  //     expect(appController.getItems()).toHaveLength(2);
-  //   })
-  // });
 });
